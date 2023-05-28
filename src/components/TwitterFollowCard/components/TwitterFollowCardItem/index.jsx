@@ -1,21 +1,23 @@
-function TwitterFollowCardItem() {
+function TwitterFollowCardItem({ username, initialIsFollowing, children }) {
   return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
         <img
-          src={`https://unavatar.io/jesusmongedev`}
-          alt="El avatar de jesusmongedev"
+          src={`https://unavatar.io/${username}`}
+          alt={`El avatar de ${username}`}
           className="tw-followCard-avatar"
         />
         <div className="tw-followCard-info">
-          <strong>Jesus Monge</strong>
+          <strong>{children}</strong>
           <div className="tw-followCard-infoAccountDetails">
             <span className="tw-followCard-infoAccountDetailsUserName">
-              @jmongedev
+              @{username}
             </span>
-            <span className="tw-followCard-infoAccountDetailsIsFollowing">
-              Follows you
-            </span>
+            {initialIsFollowing ? (
+              <span className="tw-followCard-infoAccountDetailsIsFollowing">
+                Follows you
+              </span>
+            ) : null}
           </div>
         </div>
       </header>
