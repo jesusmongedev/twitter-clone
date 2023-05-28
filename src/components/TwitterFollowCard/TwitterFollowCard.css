@@ -23,6 +23,7 @@
 .tw-followCard {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
 }
 
@@ -35,13 +36,21 @@
 .tw-followCard-info {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
 .tw-followCard-infoAccountDetails {
   color: #71767b;
 }
-.tw-followCard-infoAccountDetailsUserName {
-  font-size: 15px;
+
+.tw-followCard-infoUserNameContainer {
+  display: inline-block;
+  width: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 .tw-followCard-infoAccountDetailsIsFollowing {
   padding: 4px;

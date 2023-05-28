@@ -10,9 +10,9 @@ function TwitterFollowCardItem({ username, initialIsFollowing, children }) {
         <div className="tw-followCard-info">
           <strong>{children}</strong>
           <div className="tw-followCard-infoAccountDetails">
-            <span className="tw-followCard-infoAccountDetailsUserName">
-              @{username}
-            </span>
+            <div className="tw-followCard-infoUserNameContainer">
+              <span>@{username}</span>
+            </div>
             {initialIsFollowing ? (
               <span className="tw-followCard-infoAccountDetailsIsFollowing">
                 Follows you
