@@ -9,11 +9,12 @@ function App() {
     <TwitterFollowCard>
       <TwitterFollowCardHeader />
       <div className="card_content">
-        {users.map(({ userName, name, isFollowing }) => (
+        {users.map(({ userName, name, isFollowing, followsUser }) => (
           <TwitterFollowCardItem
             key={userName}
             username={userName}
             initialIsFollowing={isFollowing}
+            followsUser={followsUser}
           >
             {name}
           </TwitterFollowCardItem>

@@ -1,4 +1,16 @@
-function TwitterFollowCardItem({ username, initialIsFollowing, children }) {
+import { useState } from 'react';
+
+function TwitterFollowCardItem({
+  username,
+  initialIsFollowing,
+  children,
+  followsUser,
+}) {
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
+  const togleFollowing = () => setIsFollowing(!isFollowing);
+  const buttonLabel = isFollowing ? 'Following' : 'Follow';
+  const btnClassIsFollowing = isFollowing ? 'isFollowing' : '';
+
   return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
@@ -13,7 +25,7 @@ function TwitterFollowCardItem({ username, initialIsFollowing, children }) {
             <div className="tw-followCard-infoUserNameContainer">
               <span>@{username}</span>
             </div>
-            {initialIsFollowing ? (
+            {followsUser ? (
               <span className="tw-followCard-infoAccountDetailsIsFollowing">
                 Follows you
               </span>
@@ -22,7 +34,12 @@ function TwitterFollowCardItem({ username, initialIsFollowing, children }) {
         </div>
       </header>
       <aside>
-        <button className="tw-followCard-button">Follow</button>
+        <button
+          onClick={togleFollowing}
+          className={`tw-followCard-button ${btnClassIsFollowing}`}
+        >
+          {buttonLabel}
+        </button>
       </aside>
     </article>
   );
