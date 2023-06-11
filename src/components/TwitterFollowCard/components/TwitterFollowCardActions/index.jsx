@@ -5,7 +5,7 @@ function TwitterFollowCardActions() {
         Show more
       </a>
     </div>
-  );
+  )
 }
 
-export default TwitterFollowCardActions;
+export default TwitterFollowCardActions

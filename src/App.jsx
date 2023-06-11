@@ -4,7 +4,7 @@ import TwitterFollowCardHeader from './components/TwitterFollowCard/components/T
 import TwitterFollowCardItem from './components/TwitterFollowCard/components/TwitterFollowCardItem'
 import { users } from './components/TwitterFollowCard/data'
 
-function App() {
+export default function App() {
   return (
     <TwitterFollowCard>
       <TwitterFollowCardHeader />
@@ -24,5 +24,3 @@ function App() {
     </TwitterFollowCard>
   )
 }
-
-export default App

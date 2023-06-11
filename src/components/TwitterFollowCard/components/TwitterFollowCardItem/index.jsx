@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 function TwitterFollowCardItem({
   username,
@@ -6,10 +6,10 @@ function TwitterFollowCardItem({
   children,
   followsUser,
 }) {
-  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
-  const togleFollowing = () => setIsFollowing(!isFollowing);
-  const buttonLabel = isFollowing ? 'Following' : 'Follow';
-  const btnClassIsFollowing = isFollowing ? 'isFollowing' : '';
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
+  const togleFollowing = () => setIsFollowing(!isFollowing)
+  const buttonLabel = isFollowing ? 'Following' : 'Follow'
+  const btnClassIsFollowing = isFollowing ? 'isFollowing' : ''
 
   return (
     <article className="tw-followCard">
@@ -42,7 +42,7 @@ function TwitterFollowCardItem({
         </button>
       </aside>
     </article>
-  );
+  )
 }
 
-export default TwitterFollowCardItem;
+export default TwitterFollowCardItem

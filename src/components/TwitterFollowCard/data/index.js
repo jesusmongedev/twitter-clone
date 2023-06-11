@@ -17,4 +17,4 @@ export const users = [
     isFollowing: false,
     followsUser: false,
   },
-];
+]

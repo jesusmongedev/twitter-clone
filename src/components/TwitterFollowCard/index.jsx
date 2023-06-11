@@ -1,7 +1,7 @@
-import './TwitterFollowCard.css';
+import './TwitterFollowCard.css'
 
 function TwitterFollowCard({ children }) {
-  return <div className="card">{children}</div>;
+  return <div className="card">{children}</div>
 }
 
-export default TwitterFollowCard;
+export default TwitterFollowCard
