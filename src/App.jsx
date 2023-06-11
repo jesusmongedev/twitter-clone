@@ -1,8 +1,8 @@
-import TwitterFollowCard from './components/TwitterFollowCard';
-import TwitterFollowCardActions from './components/TwitterFollowCard/components/TwitterFollowCardActions';
-import TwitterFollowCardHeader from './components/TwitterFollowCard/components/TwitterFollowCardHeader';
-import TwitterFollowCardItem from './components/TwitterFollowCard/components/TwitterFollowCardItem';
-import { users } from './components/TwitterFollowCard/data';
+import TwitterFollowCard from './components/TwitterFollowCard'
+import TwitterFollowCardActions from './components/TwitterFollowCard/components/TwitterFollowCardActions'
+import TwitterFollowCardHeader from './components/TwitterFollowCard/components/TwitterFollowCardHeader'
+import TwitterFollowCardItem from './components/TwitterFollowCard/components/TwitterFollowCardItem'
+import { users } from './components/TwitterFollowCard/data'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       </div>
       <TwitterFollowCardActions />
     </TwitterFollowCard>
-  );
+  )
 }
 
-export default App;
+export default App
